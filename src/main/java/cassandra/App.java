@@ -3,14 +3,12 @@ package cassandra;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Session;
 
-public class App {
 
+public class App {
     private static final String ContactPoints = "35.180.61.204";
     private static final int Port = 9042;
 
-
     public static void main(String[] args){
-
         Cluster cassandraCluster = Cluster
                 .builder()
                 .addContactPoint(ContactPoints)
@@ -30,6 +28,5 @@ public class App {
             System.out.println(keyspace.getName());
             keyspace.getTables().forEach((k) -> System.out.println(k.getName()));
         }
-
     }
 }
