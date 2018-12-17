@@ -20,7 +20,7 @@ public class App {
         var allHosts = session.getCluster().getMetadata().getAllHosts();
         allHosts.forEach((k) -> System.out.println(k.getAddress().toString()));
 
-        System.out.println("______________");
+        System.out.println("keyspaces list");
 
         var keyspaces = session.getCluster().getMetadata().getKeyspaces();
 
